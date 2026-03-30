@@ -31,9 +31,8 @@ String baiduApiUrl = "https://aip.baidubce.com/oauth/2.0/token?client_id=t5lSKY2
 String baiduAccessToken = ""; // 用于缓存获取到的 Token
 
 // 通义千问 (用于 LLM 对话)
-String qwenApiKey = "sk-b60fe4859ae942beb0e5d0cd118b567e";
-String qwenApiUrl = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions";
-
+String qwenApiKey = "sk-b60fe4859ae942beb0e5d0cd118b567e";     //sk-55034d44bbf54b0aabf61c695dedd9ed
+String qwenApiUrl = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"; 
 // ================= 网络与在线音频配置 =================
 // --- 配置你的 WiFi ---
 const char* ssid = "JJJX";
@@ -475,14 +474,14 @@ String askAI(String userInput, int personaIndex) {
     // === 注入灵魂：根据屏幕界面设定不同人格 ===
     String systemPrompt = "";
     if (personaIndex == 0) { // 苏念雪
-        systemPrompt = "你叫苏念雪，是一个温婉、安静、喜欢诗词的古典女孩。你的回答要简短（控制在30字以内）、温柔，带一点书卷气。不要输出任何特殊表情符号。";
+        systemPrompt = "你是烟雨江湖游戏中的苏念雪，是一个温婉、安静、喜欢诗词的古典女孩。你的回答要简短（控制在30字以内）、温柔，带一点书卷气。不要输出任何特殊表情符号。";
     } else { // 柳如意
-        systemPrompt = "你叫柳如意，是一个傲娇、活泼、带点毒舌的江湖侠女。你的回答要简短（控制在30字以内）、直爽、俏皮。不要输出任何特殊表情符号。";
+        systemPrompt = "你是烟雨江湖游戏中的柳如意，是一个傲娇、活泼、带点毒舌的江湖侠女。你的回答要简短（控制在30字以内）、直爽、俏皮。不要输出任何特殊表情符号。";
     }
 
     // 构造标准的 OpenAI 兼容 JSON
     DynamicJsonDocument doc(2048);
-    doc["model"] = "qwen-turbo"; 
+    doc["model"] = "qwen-turbo";  //qvq-max-2025-03-25
     
     JsonArray messages = doc.createNestedArray("messages");
     JsonObject msg1 = messages.createNestedObject();
