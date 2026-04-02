@@ -31,7 +31,7 @@ String baiduApiUrl = "https://aip.baidubce.com/oauth/2.0/token?client_id=t5lSKY2
 String baiduAccessToken = ""; // 用于缓存获取到的 Token
 
 // 通义千问 (用于 LLM 对话)
-String qwenApiKey = "sk-b60fe4859ae942beb0e5d0cd118b567e";     //sk-55034d44bbf54b0aabf61c695dedd9ed
+String qwenApiKey = "sk-55034d44bbf54b0aabf61c695dedd9ed";    
 String qwenApiUrl = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"; 
 // ================= 网络与在线音频配置 =================
 // --- 配置你的 WiFi ---
