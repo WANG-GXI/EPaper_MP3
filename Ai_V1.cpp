@@ -28,12 +28,12 @@
 uint8_t *custom_font_buffer = nullptr;
 
 // ================= API 凭证 =================
-String baiduApiUrl = "https://aip.baidubce.com/oauth/2.0/token?client_id=t5lSKY2hiTzmMSavCAnlYpIM&client_secret=dUUWecpRz4mak0qsAZYfK2dYQSuXiaMS&grant_type=client_credentials";
+String baiduApiUrl = "https://aip.baidubce.com/oauth/2.0/token?client_id=xxxxx&client_secret=xxxxx&grant_type=client_credentials";
 String baiduAccessToken = ""; 
-String qwenApiKey = "sk-55034d44bbf54b0aabf61c695dedd9ed";  
+String qwenApiKey = "sk-xxxxxxx";  
 String qwenApiUrl = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"; 
-String notionToken = "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"; 
-String notionDatabaseId = "337a6b4aae588033b75af8eeefdf94de";     
+String notionToken = "ntn_xxxxxxx"; 
+String notionDatabaseId = "xxxxxxx";     
 String notionApiUrl = "https://api.notion.com/v1/databases/" + notionDatabaseId + "/query";
 
 String lastMessageId = "";
